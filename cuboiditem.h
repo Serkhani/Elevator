@@ -7,11 +7,11 @@ class CuboidItem : public QGraphicsItem
 {
 public:
     CuboidItem(qreal width, qreal height, qreal depth, QGraphicsItem *parent = nullptr);
-    QRectF boundingRect()
+    virtual QRectF boundingRect() const override
     {
         return QRectF(-m_width / 2, -m_height / 2, m_width, m_height);
     }
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr)
+    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) override
     {
         // Draw cuboid using QPainter
         painter->setPen(Qt::black);
