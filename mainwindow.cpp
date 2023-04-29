@@ -13,3 +13,36 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::onthirdFloorDownBtnClicked()
+{
+
+}
+
+void MainWindow::onfirstFloorDownBtnClicked()
+{
+
+}
+
+void MainWindow::onfirstFloorUpBtnClicked()
+{
+
+}
+
+void MainWindow::onsecondFloorDownBtnClicked()
+{
+
+}
+
+void MainWindow::onsecondFloorUpBtnClicked()
+{
+
+}
+
+void MainWindow::ongroundFloorUpBtnClicked()
+{
+
+}
+
+
+

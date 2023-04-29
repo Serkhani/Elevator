@@ -15,6 +15,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void onthirdFloorDownBtnClicked();
+    void onsecondFloorUpBtnClicked();
+    void onsecondFloorDownBtnClicked();
+    void onfirstFloorUpBtnClicked();
+    void onfirstFloorDownBtnClicked();
+    void ongroundFloorUpBtnClicked();
 private:
     Ui::MainWindow *ui;
 };
