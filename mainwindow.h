@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "cuboiditem.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,5 +25,11 @@ private slots:
     void ongroundFloorUpBtnClicked();
 private:
     Ui::MainWindow *ui;
+    QGraphicsScene *scene;
+    CuboidItem *elevator;
+    CuboidItem *groundFloor;
+    CuboidItem *firstFloor;
+    CuboidItem *secondFloor;
+    CuboidItem *thirdFloor;
 };
 #endif // MAINWINDOW_H
