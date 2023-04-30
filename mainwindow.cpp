@@ -9,10 +9,20 @@ MainWindow::MainWindow(QWidget *parent)
 {
 
     QGraphicsScene *scene = new QGraphicsScene();
-    CuboidItem *cuboid = new CuboidItem(100,100,100);
+    CuboidItem *groundFloor = new CuboidItem(100, 100, 100);
+    CuboidItem *firstFloor = new CuboidItem(100, 100, 100);
+    CuboidItem *secondFloor = new CuboidItem(100, 100, 100);
+    CuboidItem *thirdFloor = new CuboidItem(100, 100, 100);
+    firstFloor->setPos(0, 100);
+    secondFloor->setPos(0, 200);
+    thirdFloor->setPos(0, 300);
     ui->setupUi(this);
     ui->graphicsView->setScene(scene);
-    scene->addItem(cuboid);
+    // Add cuboids to the scene
+    scene->addItem(groundFloor);
+    scene->addItem(firstFloor);
+    scene->addItem(secondFloor);
+    scene->addItem(thirdFloor);
 }
 
 MainWindow::~MainWindow()
