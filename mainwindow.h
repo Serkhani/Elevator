@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "cuboiditem.h"
+#include "cuboidobj.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,6 +14,7 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    void moveCuboid(const QPointF& targetPos);
     ~MainWindow();
 
 private slots:
@@ -31,10 +32,10 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
-    CuboidItem *elevator;
-    CuboidItem *groundFloor;
-    CuboidItem *firstFloor;
-    CuboidItem *secondFloor;
-    CuboidItem *thirdFloor;
+    CuboidObj *elevator;
+    CuboidObj *groundFloor;
+    CuboidObj *firstFloor;
+    CuboidObj *secondFloor;
+    CuboidObj *thirdFloor;
 };
 #endif // MAINWINDOW_H
