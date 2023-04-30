@@ -4,7 +4,7 @@
 #include <QGraphicsScene>
 #include <QPropertyAnimation>
 #include <QGraphicsItemAnimation>
-
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -22,6 +22,14 @@ MainWindow::MainWindow(QWidget *parent)
     secondFloor->setPos(0, 200);
     thirdFloor->setPos(0, 300);
     ui->setupUi(this);
+    connect(ui->firstFloorSelectBtn, SIGNAL(clicked(bool)),
+            this, SLOT(onfirstFloorSelectBtnClicked()));
+    connect(ui->secondFloorSelectBtn, SIGNAL(clicked(bool)),
+            this, SLOT(onsecondFloorSelectBtnClicked()));
+    connect(ui->thirdFloorSelectBtn, SIGNAL(clicked(bool)),
+            this, SLOT(onthirdFloorSelectBtnClicked()));
+    connect(ui->groundFloorSelectBtn, SIGNAL(clicked(bool)),
+            this, SLOT(ongroundFloorSelectBtnClicked()));
     ui->graphicsView->setScene(scene);
     // Add cuboids to the scene
     scene->addItem(elevator);
@@ -44,64 +52,71 @@ MainWindow::~MainWindow()
 
 void MainWindow::onthirdFloorDownBtnClicked()
 {
-    this->moveCuboid(QPointF(0,300));
+//    this->moveCuboid(QPointF(0,300));
 }
 
 void MainWindow::onfirstFloorDownBtnClicked()
 {
-    this->moveCuboid(QPointF(0,100));
+//    this->moveCuboid(QPointF(0,100));
 }
 
 void MainWindow::onfirstFloorUpBtnClicked()
 {
-    this->moveCuboid(QPointF(0,100));
+//    this->moveCuboid(QPointF(0,100));
 }
 
 void MainWindow::onsecondFloorDownBtnClicked()
 {
-    this->moveCuboid(QPointF(0,200));
+//    this->moveCuboid(QPointF(0,200));
 }
 
 void MainWindow::onsecondFloorUpBtnClicked()
 {
-    this->moveCuboid(QPointF(0,200));
+//    this->moveCuboid(QPointF(0,200));
 }
 
 void MainWindow::ongroundFloorUpBtnClicked()
 {
-    this->moveCuboid(QPointF(0,0));
+//    this->moveCuboid(QPointF(0,0));
 }
 
 void MainWindow::onthirdFloorSelectBtnClicked()
 {
-    this->moveCuboid(QPointF(0,300));
+    this->moveCuboid(QPointF(0, 0));
 }
 
 
 void MainWindow::onsecondFloorSelectBtnClicked()
 {
-//    this->moveCuboid(QPointF(0,200));
+    this->moveCuboid(QPointF(0, 100));
 }
 
 
 void MainWindow::onfirstFloorSelectBtnClicked()
 {
-//    this->moveCuboid(QPointF(0,100));
+    this->moveCuboid(QPointF(0, 200));
 }
 
 
 void MainWindow::ongroundFloorSelectBtnClicked()
 {
-//    this->moveCuboid(QPointF(0,0));
+    this->moveCuboid(QPointF(0, 300));
+
 }
 
 void MainWindow::moveCuboid(const QPointF& targetPos)
 {
     QPropertyAnimation* animation = new QPropertyAnimation(elevator, "pos");
+    connect(animation, &QPropertyAnimation::valueChanged, this, [this]() {
+//            elevator->update(); // update the view after each step of the animation
+//        elevator->paint(QPainter(),QStyleOptionGraphicsItem());
+        ui->graphicsView->scene()->update();
+        });
     animation->setDuration(2000); // Set the animation duration to 1 second
     animation->setStartValue(elevator->pos());
     animation->setEndValue(targetPos); // Set the target position
     animation->start(QAbstractAnimation::DeleteWhenStopped); // Start the animation
+
 }
 
 
