@@ -33,6 +33,9 @@ MainWindow::~MainWindow()
     delete ui;
     delete scene;
     delete firstFloor;
+    delete secondFloor;
+    delete thirdFloor;
+    delete elevator;
 }
 
 
@@ -67,4 +70,28 @@ void MainWindow::ongroundFloorUpBtnClicked()
 }
 
 
+
+
+void MainWindow::onthirdFloorSelectBtnClicked()
+{
+
+}
+
+
+void MainWindow::onsecondFloorSelectBtnClicked()
+{
+
+}
+
+
+void MainWindow::onfirstFloorSelectBtnClicked()
+{
+
+}
+
+
+void MainWindow::ongroundFloorSelectBtnClicked()
+{
+
+}
 

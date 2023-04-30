@@ -23,6 +23,11 @@ private slots:
     void onfirstFloorUpBtnClicked();
     void onfirstFloorDownBtnClicked();
     void ongroundFloorUpBtnClicked();
+    void onthirdFloorSelectBtnClicked();
+    void onsecondFloorSelectBtnClicked();
+    void onfirstFloorSelectBtnClicked();
+    void ongroundFloorSelectBtnClicked();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
