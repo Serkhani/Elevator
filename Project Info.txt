@@ -1,0 +1,7 @@
+Buttons on the left dockwidget(summon panel) are used to summon the elevator to the specific floor.
+the user presses a button from summon panel.
+the user waits until the elevator is in place.
+the user clicks the floor in which the user intends to go. The floor is on the right panel.
+
+Project was built with Qt 6.4.2 MinGW 64-bit
+Qt website: qt.io
