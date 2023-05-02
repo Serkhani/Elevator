@@ -10,11 +10,13 @@ CONFIG += c++17
 
 SOURCES += \
     cuboidobj.cpp \
+    logic/elevator.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     cuboidobj.h \
+    logic/elevator.h \
     mainwindow.h
 
 RESOURCES += \
