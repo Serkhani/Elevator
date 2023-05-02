@@ -31,3 +31,4 @@ void CuboidObj::paint(QPainter *painter, [[maybe_unused]] const QStyleOptionGrap
     painter->drawLine(-m_width / 2 - m_depth / 2, m_height / 2 - m_depth / 2, -m_width / 2 - m_depth / 2, -m_height / 2 - m_depth / 2);
 
 }
+

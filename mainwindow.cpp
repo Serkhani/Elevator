@@ -30,6 +30,20 @@ MainWindow::MainWindow(QWidget *parent)
             this, SLOT(onthirdFloorSelectBtnClicked()));
     connect(ui->groundFloorSelectBtn, SIGNAL(clicked(bool)),
             this, SLOT(ongroundFloorSelectBtnClicked()));
+    connect(ui->firstFloorDownBtn, SIGNAL(clicked(bool)),
+            this, SLOT(onfirstFloorDownBtnClicked()));
+    connect(ui->firstFloorUpBtn, SIGNAL(clicked(bool)),
+            this, SLOT(onfirstFloorUpBtnClicked()));
+    connect(ui->secondFloorDownBtn, SIGNAL(clicked(bool)),
+            this, SLOT(onsecondFloorDownBtnClicked()));
+    connect(ui->secondFloorUpBtn, SIGNAL(clicked(bool)),
+            this, SLOT(onsecondFloorUpBtnClicked()));
+    connect(ui->gFloorUpBtn, SIGNAL(clicked(bool)),
+            this, SLOT(ongroundFloorUpBtnClicked()));
+    connect(ui->thirdFloorDownBtn, SIGNAL(clicked(bool)),
+            this, SLOT(onthirdFloorDownBtnClicked()));
+
+
     ui->graphicsView->setScene(scene);
     // Add cuboids to the scene
     scene->addItem(elevator);
@@ -52,32 +66,32 @@ MainWindow::~MainWindow()
 
 void MainWindow::onthirdFloorDownBtnClicked()
 {
-//    this->moveCuboid(QPointF(0,300));
+    this->moveCuboid(QPointF(0,0));
 }
 
 void MainWindow::onfirstFloorDownBtnClicked()
 {
-//    this->moveCuboid(QPointF(0,100));
+    this->moveCuboid(QPointF(0,200));
 }
 
 void MainWindow::onfirstFloorUpBtnClicked()
 {
-//    this->moveCuboid(QPointF(0,100));
+    this->moveCuboid(QPointF(0,200));
 }
 
 void MainWindow::onsecondFloorDownBtnClicked()
 {
-//    this->moveCuboid(QPointF(0,200));
+    this->moveCuboid(QPointF(0,100));
 }
 
 void MainWindow::onsecondFloorUpBtnClicked()
 {
-//    this->moveCuboid(QPointF(0,200));
+    this->moveCuboid(QPointF(0,100));
 }
 
 void MainWindow::ongroundFloorUpBtnClicked()
 {
-//    this->moveCuboid(QPointF(0,0));
+    this->moveCuboid(QPointF(0,300));
 }
 
 void MainWindow::onthirdFloorSelectBtnClicked()
