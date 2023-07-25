@@ -2,6 +2,7 @@
 The Elevator Simulator is a C++ application built using the [Qt](https://qt.io) framework for our final course project. The project aims to simulate the operation and behavior of an elevator system. This README file provides an overview of the project, its features, and instructions on how to build and run the simulator.
 
 > Elevator Simulator Demo (Replace link_to_demo.gif with an actual link to a demo of your elevator simulator)
+
 https://github.com/Serkhani/CPEN208_Software_Engineering/assets/66341820/d85b2dd6-f6fb-4125-b7d3-ba5fc002368b
 
 # Features
