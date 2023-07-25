@@ -1,4 +1,4 @@
-#include "cuboidobj.h"
+#include "Headers/cuboidobj.h"
 
 CuboidObj::CuboidObj(qreal width, qreal height, qreal depth, QGraphicsObject *parent)
         : QGraphicsObject(parent), m_width(width), m_height(height), m_depth(depth)

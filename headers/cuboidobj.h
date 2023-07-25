@@ -1,6 +1,6 @@
 #ifndef CUBOIDOBJ_H
 #define CUBOIDOBJ_H
-#include "logic/elevator.h"
+// #include "logic/elevator.h"
 #include <QGraphicsItem>
 #include <QPainter>
 #include <QObject>

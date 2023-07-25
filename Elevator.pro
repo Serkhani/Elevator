@@ -9,19 +9,20 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    cuboidobj.cpp \
-    main.cpp \
-    mainwindow.cpp
+    src/cuboidobj.cpp \
+    src/mainwindow.cpp \
+    main.cpp 
 
 HEADERS += \
-    cuboidobj.h \
-    mainwindow.h
+    headers/cuboidobj.h \
+    headers/mainwindow.h \
+    headers/ui_mainwindow.h
 
 RESOURCES += \
-    resources.qrc
+    resources/resources.qrc
 
 FORMS += \
-    mainwindow.ui
+    resources/mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
