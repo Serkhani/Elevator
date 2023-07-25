@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 https://github.com/Serkhani/CPEN208_Software_Engineering/assets/66341820/d85b2dd6-f6fb-4125-b7d3-ba5fc002368b
 Elevator Simulator
 Elevator Simulator Demo (Replace link_to_demo.gif with an actual link to a demo of your elevator simulator)
@@ -53,3 +54,7 @@ Selecting Destinations: Once inside an elevator cabin, press the cabin buttons t
 Observing Status: Observe the real-time status of each elevator cabin, including its current floor and direction of movement.
 
 Configuring Settings: If necessary, explore the option to customize various settings in the simulator through the interface or configuration files.
+=======
+# Elevator
+A final course project to simulate an elevator. Built with Qt
+>>>>>>> e48f59e102d12aedb2f1f1e4dd839a7046804108
